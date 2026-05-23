@@ -1,4 +1,20 @@
+res://Scripts/
+res://Scene/
+res://Assets/Red Raptor/Raptor Attack1/W/
+res://Assets/Red Raptor/Raptor Attack1/S/
+res://Assets/Red Raptor/Raptor Attack1/N/
+res://Assets/Red Raptor/Raptor Attack1/E/
+res://Assets/Red Raptor/Raptor Attack4/W/
+res://Assets/Red Raptor/Raptor Attack4/S/
+res://Assets/Red Raptor/Raptor Attack4/N/
+res://Assets/Red Raptor/Raptor Attack4/E/
+res://Assets/Red Raptor/Raptor Idle/W/
+res://Assets/Red Raptor/Raptor run/W/
+res://Assets/Red Raptor/Raptor Idle/S/
+res://Assets/Red Raptor/Raptor Idle/N/
+res://Assets/Red Raptor/Raptor run/S/
+res://Assets/Red Raptor/Raptor run/N/
+res://Assets/Red Raptor/Raptor run/E/
+res://Assets/Red Raptor/Raptor Idle/E/
 res://Resources/Ennemy/
 res://Resources/
-res://Scene/
-res://Scripts/

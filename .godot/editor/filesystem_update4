@@ -1,12 +1,9 @@
 res://Scene/player.tscn
+res://Resources/Player/player_raptor.tres
 res://Scripts/player.gd
+res://Scripts/ennemy.gd
+res://Scene/spawnArea.tscn
+res://Scripts/spawn_area.gd
 res://Scene/level.tscn
-res://Scene/firstEnnemy.tscn
-res://Scripts/CharacterData.gd
-res://Scene/first_ennemy.gd
-res://Scripts/EnnemyData.gd
 res://Scene/Ennemy.tscn
-res://Scene/ennemy.gd
-res://Resources/Ennemy/light_ennemy.tres
-res://Resources/Ennemy/medium_ennemy.tres
-res://Resources/Ennemy/heavy_ennemy.tres
+res://Scene/level.gd
