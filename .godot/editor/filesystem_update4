@@ -1,0 +1,12 @@
+res://Scene/player.tscn
+res://Scripts/player.gd
+res://Scene/level.tscn
+res://Scene/firstEnnemy.tscn
+res://Scripts/CharacterData.gd
+res://Scene/first_ennemy.gd
+res://Scripts/EnnemyData.gd
+res://Scene/Ennemy.tscn
+res://Scene/ennemy.gd
+res://Resources/Ennemy/light_ennemy.tres
+res://Resources/Ennemy/medium_ennemy.tres
+res://Resources/Ennemy/heavy_ennemy.tres

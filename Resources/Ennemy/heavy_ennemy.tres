@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnnemyData" format=3 uid="uid://b7cwuvqv6u7yq"]
+
+[ext_resource type="Script" uid="uid://lwlqpvnm83fm" path="res://Scripts/EnnemyData.gd" id="1_7oyu4"]
+
+[resource]
+script = ExtResource("1_7oyu4")
+ennemy_id = 2
+life = 50.0
+damage = 30.0
+drop_xp = 50.0
+metadata/_custom_type_script = "uid://lwlqpvnm83fm"
