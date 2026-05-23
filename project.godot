@@ -25,6 +25,7 @@ window/stretch/aspect="ignore"
 [global_group]
 
 Ennemy=""
+Player=""
 
 [input]
 

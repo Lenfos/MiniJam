@@ -1,10 +1,156 @@
 [gd_resource type="Resource" script_class="EnnemyData" format=3 uid="uid://b7cwuvqv6u7yq"]
 
 [ext_resource type="Script" uid="uid://lwlqpvnm83fm" path="res://Scripts/EnnemyData.gd" id="1_7oyu4"]
+[ext_resource type="Texture2D" uid="uid://va13yqxagphu" path="res://Assets/Lancer.png" id="2_lx611"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl7wh"]
+atlas = ExtResource("2_lx611")
+region = Rect2(0, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r214v"]
+atlas = ExtResource("2_lx611")
+region = Rect2(100, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fly8o"]
+atlas = ExtResource("2_lx611")
+region = Rect2(200, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m3wpt"]
+atlas = ExtResource("2_lx611")
+region = Rect2(300, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6jkv"]
+atlas = ExtResource("2_lx611")
+region = Rect2(400, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxwbt"]
+atlas = ExtResource("2_lx611")
+region = Rect2(500, 300, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fmip"]
+atlas = ExtResource("2_lx611")
+region = Rect2(0, 700, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yd8gf"]
+atlas = ExtResource("2_lx611")
+region = Rect2(100, 700, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2fn3"]
+atlas = ExtResource("2_lx611")
+region = Rect2(200, 700, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_116k3"]
+atlas = ExtResource("2_lx611")
+region = Rect2(300, 700, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6w0c"]
+atlas = ExtResource("2_lx611")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5a0t6"]
+atlas = ExtResource("2_lx611")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qij5q"]
+atlas = ExtResource("2_lx611")
+region = Rect2(200, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfhpe"]
+atlas = ExtResource("2_lx611")
+region = Rect2(300, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7r1j"]
+atlas = ExtResource("2_lx611")
+region = Rect2(400, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwdak"]
+atlas = ExtResource("2_lx611")
+region = Rect2(500, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kl0bf"]
+atlas = ExtResource("2_lx611")
+region = Rect2(600, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ph5n"]
+atlas = ExtResource("2_lx611")
+region = Rect2(700, 100, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yhurh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl7wh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r214v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fly8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m3wpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6jkv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxwbt")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fmip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yd8gf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2fn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_116k3")
+}],
+"loop": true,
+"name": &"Die",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6w0c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5a0t6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qij5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfhpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7r1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gwdak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kl0bf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ph5n")
+}],
+"loop": true,
+"name": &"Walk",
+"speed": 7.0
+}]
 
 [resource]
 script = ExtResource("1_7oyu4")
 ennemy_id = 2
+sprite = SubResource("SpriteFrames_yhurh")
 life = 50.0
 damage = 30.0
 drop_xp = 50.0

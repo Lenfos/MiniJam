@@ -1,10 +1,10 @@
+RayCast2D
 Timer
 CollisionShape2D
 Area2D
 AnimatedSprite2D
 CharacterBody2D
 Node2D
-RayCast2D
 Camera2D
 TileMapLayer
 Node

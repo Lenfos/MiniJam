@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://c0ldbcvnikogf"]
 
 [ext_resource type="PackedScene" uid="uid://b3sxmksdgdur4" path="res://Scene/player.tscn" id="1_7wcfd"]
-[ext_resource type="Script" uid="uid://belq5bwewl7hr" path="res://Scene/level.gd" id="1_jnrmd"]
+[ext_resource type="Script" uid="uid://belq5bwewl7hr" path="res://Scripts/level.gd" id="1_jnrmd"]
 [ext_resource type="PackedScene" uid="uid://cr5jnycu3ua7e" path="res://Scene/spawnArea.tscn" id="2_3bu56"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7wcfd"]

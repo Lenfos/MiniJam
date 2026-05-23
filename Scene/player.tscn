@@ -1,7 +1,12 @@
 [gd_scene format=3 uid="uid://b3sxmksdgdur4"]
 
 [ext_resource type="Script" uid="uid://chrmx41nh4vj6" path="res://Scripts/player.gd" id="1_y8w33"]
+[ext_resource type="Shader" uid="uid://ci5q52yjvl0b1" path="res://Resources/hitShader.gdshader" id="2_xa75v"]
 [ext_resource type="Texture2D" uid="uid://cykaqfyx37cpx" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_001.png" id="2_y8w33"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_58ae2"]
+shader = ExtResource("2_xa75v")
+shader_parameter/active = false
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_58ae2"]
 animations = [{
@@ -14,24 +19,26 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ivevv"]
-radius = 3.365515
+[sub_resource type="CircleShape2D" id="CircleShape2D_y8w33"]
+radius = 1.7271837
 
-[node name="Player" type="CharacterBody2D" unique_id=1531719688 node_paths=PackedStringArray("light_attack_timer")]
+[node name="Player" type="CharacterBody2D" unique_id=1531719688 node_paths=PackedStringArray("light_attack_timer") groups=["Player"]]
 script = ExtResource("1_y8w33")
 light_attack_timer = NodePath("lightAttackTimer")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=471142449]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2068155642]
+material = SubResource("ShaderMaterial_58ae2")
 scale = Vector2(3.4089622, 3.3217416)
 sprite_frames = SubResource("SpriteFrames_58ae2")
 frame_progress = 0.8626909
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=508927368]
-position = Vector2(13.999999, 12)
+position = Vector2(9, 13.999999)
+rotation = 1.5631449
 scale = Vector2(12.494592, 12.10061)
-shape = SubResource("CircleShape2D_ivevv")
+shape = SubResource("CircleShape2D_y8w33")
 
 [node name="lightAttackTimer" type="Timer" parent="." unique_id=692443930]
 wait_time = 0.3

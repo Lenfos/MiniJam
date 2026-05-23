@@ -788,8 +788,8 @@ animations = [{
 [resource]
 script = ExtResource("1_pesps")
 sprite_frames = SubResource("SpriteFrames_vcatc")
-life = 40.0
-damageLight = 10.0
+life = 20.0
+damageLight = 20.0
 damageHeavy = 30.0
-lightRayLength = 150
+lightRayLength = 175
 metadata/_custom_type_script = "uid://c2r67lr1uipkf"

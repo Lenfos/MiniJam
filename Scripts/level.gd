@@ -10,3 +10,4 @@ func _on_child_entered_tree(node: Node) -> void:
 	if node.is_in_group("Ennemy"):
 		player.player_attack.connect(node.on_player_attack)
 		node.ennemyDie.connect(player.on_ennemy_die)
+		node.ennemyAttack.connect(player.on_ennemy_attack)
