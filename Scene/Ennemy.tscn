@@ -1,26 +1,46 @@
 [gd_scene format=3 uid="uid://b08jvnuurpchk"]
 
-[ext_resource type="Texture2D" uid="uid://dnd830dhmrodq" path="res://icon.png" id="1_8yqgg"]
 [ext_resource type="Script" uid="uid://blaapu70neiff" path="res://Scripts/ennemy.gd" id="1_t1llo"]
 [ext_resource type="Shader" uid="uid://ci5q52yjvl0b1" path="res://Resources/hitShader.gdshader" id="2_r5h1u"]
+[ext_resource type="Texture2D" uid="uid://va13yqxagphu" path="res://Assets/Lancer.png" id="4_fkf7k"]
+[ext_resource type="Texture2D" uid="uid://cqgkvjayj1drg" path="res://Assets/Knight.png" id="4_j5pko"]
+[ext_resource type="Texture2D" uid="uid://3cm3npuayxwq" path="res://Assets/Soldier.png" id="5_hvsuy"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j5pko"]
 shader = ExtResource("2_r5h1u")
 shader_parameter/active = false
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkf7k"]
+atlas = ExtResource("4_j5pko")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50c2u"]
+atlas = ExtResource("4_fkf7k")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5bvi"]
+atlas = ExtResource("5_hvsuy")
+region = Rect2(0, 0, 100, 100)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_squny"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_8yqgg")
+"texture": SubResource("AtlasTexture_fkf7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50c2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5bvi")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 1.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2rbi7"]
-radius = 32.0
+radius = 17.029387
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1003592606 groups=["Ennemy"]]
 script = ExtResource("1_t1llo")
@@ -29,10 +49,14 @@ script = ExtResource("1_t1llo")
 material = SubResource("ShaderMaterial_j5pko")
 scale = Vector2(1.8523982, 1.8523982)
 sprite_frames = SubResource("SpriteFrames_squny")
+frame_progress = 0.3839829
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=613945626]
 shape = SubResource("CircleShape2D_2rbi7")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=244024993]
 
+[node name="hitResetTimer" type="Timer" parent="." unique_id=763071021]
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="hitResetTimer" to="." method="_on_hit_reset_timer_timeout"]

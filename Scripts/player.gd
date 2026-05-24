@@ -1,74 +1,68 @@
 extends CharacterBody2D
 
 signal player_attack(damage : float, id : int)
+signal level_up
+
+@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+@onready var cam: Camera2D = $Camera2D
+@onready var collision: CollisionShape2D = $CollisionShape2D
+
+# Light Attack
+@onready var light_attack_timer: Timer = $lightAttackTimer
+@onready var light_attack_zone: Area2D = $lightAttackZone
+
+# Heavy Attack
+@onready var heavy_attack_zone: Area2D = $heavyAttackZone
+@onready var heavy_attack_timer: Timer = $heavyAttackTimer
 
 const SPEED = 300.0
 const MULTXP = 1.2
 
+# lightAttack
 var can_light_attack = true
-var level = 1
-var next_level_xp = 10
-var xp = 0
+var isAttacking : bool = false
+
+# heavyAttack
+var can_heavy_attack = true
+var usedHeavy = 0
+var maxHeavy = 3
+
+# animations
 var playerAttr : CharacterData
 var animSuffixe : String = "E"
-var isAttacking : bool = false
+
+# XP
+var level = 60
+var next_level_xp = 10
+var xp = 0
+
 var life = 100
+var dead = false
 
-var directionX : float
-var directionY : float
 
-@onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-@export var light_attack_timer: Timer
-@onready var cam: Camera2D = $Camera2D
-@onready var light_attack_raycast: RayCast2D = $light_attack_raycast
-@onready var collision: CollisionShape2D = $CollisionShape2D
-
+#region integrateFunction
 
 func _ready() -> void:
 	switchSkin()
 	anim.animation_finished.connect(on_animation_finished)
+	light_attack_timer.timeout.connect(_on_light_attack_timer_timeout)
+	light_attack_zone.monitoring = false
+	heavy_attack_zone.monitoring = false
 	
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_accept") && can_light_attack:
+	if event.is_action_pressed("ui_accept") && can_light_attack && !isAttacking:
 		light_attack()
-
-func switchSkin():
-	print(level)
-	match level:
-		1: 
-			playerAttr = load("res://Resources/Player/player_raptor.tres")
-			applySkin()
-		10:
-			playerAttr = load("res://Resources/Player/player_dilophosaur.tres")
-			applySkin()
-
-func applySkin():
-	anim.sprite_frames = playerAttr.sprite_frames
-	isAttacking = false
-	can_light_attack = true
-	life = playerAttr.life
-	
-func _process(delta: float) -> void:
-	if directionX > 0 && directionY >= 0:
-		animSuffixe = "E"
-		collision.position = Vector2(9, 14)
-	elif directionX < 0 && directionY <= 0:
-		animSuffixe = "W"
-		collision.position = Vector2(-10, 14)
-	elif directionY > 0 && directionX == 0:
-		animSuffixe = "S"
-		collision.position = Vector2(5, 20)
-	elif directionY < 0 && directionX == 0:
-		animSuffixe = "N"
-		collision.position = Vector2(0, 14)
+	if event.is_action_pressed("ui_select") && can_heavy_attack && !isAttacking:
+		heavyAttack()
 
 func _physics_process(delta: float) -> void:
 	
-	directionX = Input.get_axis("ui_left", "ui_right")
-	directionY = Input.get_axis("ui_up", "ui_down")
+	var directionX = Input.get_axis("ui_left", "ui_right")
+	var directionY = Input.get_axis("ui_up", "ui_down")
+	
+	changeSuffixe(directionX, directionY)
 	var direction := Vector2(directionX, directionY).normalized()
-
 	
 	if direction != Vector2.ZERO && !isAttacking:
 		anim.play("Walk" + animSuffixe)
@@ -79,33 +73,69 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 
-
 	move_and_slide()
 
+#endregion
 
-func light_attack():
-	can_light_attack = false
-	anim.play("LightAttack" + animSuffixe)
-	isAttacking = true
-	directionX = 0
-	directionY = 0
+#region animations
 
-	var direction = Vector2(get_global_mouse_position() - global_position).normalized()
-	light_attack_raycast.target_position = (direction * playerAttr.lightRayLength)
-	light_attack_raycast.force_raycast_update()
-	if light_attack_raycast.is_colliding():
-		var collider = light_attack_raycast.get_collider()
-		if collider.is_in_group("Ennemy"):
-			player_attack.emit(playerAttr.damageLight, collider.spawnId)
+func switchSkin():
+	print(level)
+	match level:
+		1: 
+			playerAttr = load("res://Resources/Player/player_raptor.tres")
+			applySkin()
+		10:
+			playerAttr = load("res://Resources/Player/player_dilophosaur.tres")
+			applySkin()
+		20:
+			playerAttr = load("res://Resources/Player/player_galliminus.tres")
+			applySkin()
+		30:
+			playerAttr = load("res://Resources/Player/player_triceratops.tres")
+			applySkin()
+		40:
+			playerAttr = load("res://Resources/Player/player_stegosaure.tres")
+			applySkin()
+		50:
+			playerAttr = load("res://Resources/Player/player_crocodile.tres")
+			applySkin()
+		60:
+			playerAttr = load("res://Resources/Player/player_rex.tres")
+			applySkin()
 
-func on_ennemy_attack(ennemyDamage : float):
-	life -= ennemyDamage
-	check_life()
+func applySkin():
+	anim.sprite_frames = playerAttr.sprite_frames
+	isAttacking = false
+	can_light_attack = true
+	can_heavy_attack = true
+	usedHeavy = 0
+	life = playerAttr.life
+	if level != 1:
+		level_up.emit()
+	
+func changeSuffixe(directionX, directionY):
+	if directionY > 0 && directionX <= 0.3 && directionX >= -0.3:
+		animSuffixe = "S"
+		collision.position = Vector2(5, 20)
+	elif directionY < 0 && directionX <= 0.3 && directionX >= -0.3:
+		animSuffixe = "N"
+		collision.position = Vector2(0, 14)
+	elif directionX > 0 && directionY <= 0.3 && directionY >= -0.3:
+		animSuffixe = "E"
+		collision.position = Vector2(9, 14)
+	elif directionX < 0 && directionY <= 0.3 && directionY >= -0.3:
+		animSuffixe = "W"
+		collision.position = Vector2(-10, 14)
+	
+#endregion
 
 
 func check_life():
 	if life <= 0:
-		get_tree().paused = true
+		isAttacking = true
+		dead = true
+		anim.play("Die")
 	else:
 		hit_flash()
 		
@@ -123,11 +153,74 @@ func check_xp():
 		xp = 0
 		switchSkin()
 	
+
+
+#region signalComeback
+func on_ennemy_attack(ennemyDamage : float):
+	if dead:
+		return
+	life -= ennemyDamage
+	check_life()
+
 func on_ennemy_die(dropXp : float):
 	xp += dropXp
 	check_xp()
 	
-	
 func on_animation_finished():
-	isAttacking = false
-	can_light_attack = true
+	if anim.animation.begins_with("LightAttack"):
+		isAttacking = false
+		can_light_attack = true
+	elif anim.animation.begins_with("HeavyAttack"):
+		check_can_heavy()
+		isAttacking = false
+#endregion
+
+#region lightAttack
+
+func light_attack():
+	can_light_attack = false
+	isAttacking = true
+	
+	var direction = Vector2(get_global_mouse_position() - global_position).normalized()
+	changeSuffixe(direction.x, direction.y)
+	
+	anim.play("LightAttack" + animSuffixe)
+	
+	light_attack_zone.rotation = direction.angle()
+	light_attack_zone.monitoring = true
+	light_attack_timer.start()
+	
+
+func _on_light_attack_timer_timeout() -> void:
+	for body in light_attack_zone.get_overlapping_bodies():
+		if body.is_in_group("Ennemy"):
+			player_attack.emit(playerAttr.damageLight, body.spawnId)
+	light_attack_zone.monitoring = false
+	
+#endregion
+
+#region heavyAttack
+
+func heavyAttack():
+	can_heavy_attack = false
+	isAttacking = true
+	
+	anim.play("HeavyAttack" + animSuffixe)
+	usedHeavy += 1
+	
+	heavy_attack_zone.monitoring = true
+	heavy_attack_timer.start()
+	
+func _on_heavy_attack_timer_timeout() -> void:
+	for body in heavy_attack_zone.get_overlapping_bodies():
+		if body.is_in_group("Ennemy"):
+			player_attack.emit(playerAttr.damageHeavy, body.spawnId)
+	heavy_attack_zone.monitoring = false
+
+func check_can_heavy():
+	if usedHeavy >= maxHeavy:
+		can_heavy_attack = false
+	else:
+		can_heavy_attack = true
+
+#endregion

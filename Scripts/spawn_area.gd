@@ -1,5 +1,8 @@
 extends Area2D
 
+
+signal spawn_instance(ennemy : CharacterBody2D)
+
 @export var ennemy : PackedScene
 @onready var col: CollisionShape2D = $CollisionShape2D
 
@@ -18,6 +21,7 @@ func spawn():
 	instance.position = get_random_point_in_rect()
 	
 	scene.add_child(instance)
+	spawn_instance.emit(instance)
 	ennemyId += 1
 	
 func randomEnnemyType() -> GameEnums.EnnemyType:

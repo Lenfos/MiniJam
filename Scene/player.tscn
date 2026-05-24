@@ -22,9 +22,14 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_y8w33"]
 radius = 1.7271837
 
-[node name="Player" type="CharacterBody2D" unique_id=1531719688 node_paths=PackedStringArray("light_attack_timer") groups=["Player"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xa75v"]
+size = Vector2(64, 37)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xa75v"]
+radius = 118.004234
+
+[node name="Player" type="CharacterBody2D" unique_id=1531719688 groups=["Player"]]
 script = ExtResource("1_y8w33")
-light_attack_timer = NodePath("lightAttackTimer")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=471142449]
 
@@ -46,4 +51,24 @@ one_shot = true
 
 [node name="light_attack_raycast" type="RayCast2D" parent="." unique_id=899999279]
 
-[connection signal="timeout" from="lightAttackTimer" to="." method="_on_light_attack_timer_timeout"]
+[node name="lightAttackZone" type="Area2D" parent="." unique_id=1585154178]
+position = Vector2(9, 14)
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lightAttackZone" unique_id=1671697443]
+position = Vector2(57, 0)
+shape = SubResource("RectangleShape2D_xa75v")
+debug_color = Color(0.99999994, 0.01637035, 0.021757409, 0.41960785)
+
+[node name="heavyAttackZone" type="Area2D" parent="." unique_id=88126585]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="heavyAttackZone" unique_id=1659929013]
+position = Vector2(9, 14)
+shape = SubResource("CircleShape2D_xa75v")
+debug_color = Color(0.563734, 0.5578781, 0.08604496, 0.41960785)
+
+[node name="heavyAttackTimer" type="Timer" parent="." unique_id=584366987]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="heavyAttackTimer" to="." method="_on_heavy_attack_timer_timeout"]

@@ -1,22 +1,22 @@
-res://Assets/
-res://Assets/Dilophosaurus/Attack1/S/
-res://Assets/Dilophosaurus/Attack1/W/
-res://Assets/Dilophosaurus/Attack1/N/
-res://Assets/Dilophosaurus/Attack1/E/
-res://Assets/Dilophosaurus/Walk/W/
-res://Assets/Dilophosaurus/Walk/S/
-res://Assets/Dilophosaurus/Walk/N/
-res://Assets/Dilophosaurus/Walk/E/
-res://Assets/Dilophosaurus/Idle/S/
-res://Assets/Dilophosaurus/Idle/N/
-res://Assets/Dilophosaurus/Idle/W/
-res://Assets/Dilophosaurus/Idle/E/
-res://Resources/Player/
-res://Scripts/
-res://Scene/
-res://Assets/Red Raptor/Raptor Attack1/W/
-res://Assets/Red Raptor/Raptor Attack1/S/
-res://Assets/Red Raptor/Raptor Attack1/N/
-res://Assets/Red Raptor/Raptor Attack1/E/
-res://Assets/Red Raptor/Raptor Attack4/W/
-res://Assets/Red Raptor/Raptor Attack4/S/
+res://Assets/T-Rex/Die/E/
+res://Assets/Crocodile/Die/E/
+res://Assets/Stegosaurus/Die/E/
+res://Assets/Triceratops/Die/E/
+res://Assets/Gallimimus/Die/E/
+res://Assets/Dilophosaurus/Die/E/
+res://Assets/Red Raptor/Raptor Die/E/
+res://Assets/T-Rex/Taunt/W/
+res://Assets/T-Rex/Taunt/S/
+res://Assets/T-Rex/Taunt/N/
+res://Assets/T-Rex/Taunt/E/
+res://Assets/T-Rex/Attack2/W/
+res://Assets/T-Rex/Attack2/S/
+res://Assets/T-Rex/Attack2/N/
+res://Assets/T-Rex/Attack2/E/
+res://Assets/T-Rex/Attack3/W/
+res://Assets/T-Rex/Attack3/S/
+res://Assets/T-Rex/Attack3/N/
+res://Assets/T-Rex/Attack3/E/
+res://Assets/T-Rex/Walk/W/
+res://Assets/T-Rex/Walk/S/
+res://Assets/T-Rex/Walk/N/

@@ -1,3 +1,4 @@
-Shader
 CharacterData
+Resource
+Shader
 EnnemyData

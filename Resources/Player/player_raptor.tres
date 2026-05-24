@@ -2,108 +2,183 @@
 
 [ext_resource type="Script" uid="uid://c2r67lr1uipkf" path="res://Scripts/CharacterData.gd" id="1_pesps"]
 [ext_resource type="Texture2D" uid="uid://cykaqfyx37cpx" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_001.png" id="2_7dep6"]
+[ext_resource type="Texture2D" uid="uid://batk56mpg3j4y" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_001.png" id="2_7iolh"]
+[ext_resource type="Texture2D" uid="uid://crxkak3rioneu" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_001.png" id="2_b4wo1"]
+[ext_resource type="Texture2D" uid="uid://bjewpewvlox38" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_003.png" id="3_6hdxk"]
 [ext_resource type="Texture2D" uid="uid://dehua62jyk1nj" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_003.png" id="3_8lpla"]
+[ext_resource type="Texture2D" uid="uid://cggs6v6avwca6" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_003.png" id="3_phi45"]
+[ext_resource type="Texture2D" uid="uid://sk8sin57kjdl" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_005.png" id="4_7myvw"]
+[ext_resource type="Texture2D" uid="uid://cysy8ifws50gq" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_005.png" id="4_e5bfg"]
 [ext_resource type="Texture2D" uid="uid://bf836i1km0vhv" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_005.png" id="4_qkunt"]
+[ext_resource type="Texture2D" uid="uid://vjl3gh5nijwy" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_007.png" id="5_777ny"]
 [ext_resource type="Texture2D" uid="uid://bbryax0ddq24b" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_007.png" id="5_fek4b"]
+[ext_resource type="Texture2D" uid="uid://b7ccgy6mhb5d3" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_007.png" id="5_u6ydr"]
 [ext_resource type="Texture2D" uid="uid://iilraqfnqgkd" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_009.png" id="6_8ng78"]
+[ext_resource type="Texture2D" uid="uid://cmdf7hr8ofiga" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_009.png" id="6_gctrc"]
+[ext_resource type="Texture2D" uid="uid://dbrfk6g7qb06p" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_009.png" id="6_nexlb"]
 [ext_resource type="Texture2D" uid="uid://klorh54m2a01" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_011.png" id="7_7y4hx"]
+[ext_resource type="Texture2D" uid="uid://dcvw3pg74cqdo" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_011.png" id="7_ce1c1"]
+[ext_resource type="Texture2D" uid="uid://kpqmukgwtlta" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_011.png" id="7_xngb7"]
+[ext_resource type="Texture2D" uid="uid://ct0yen5weqhp5" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_013.png" id="8_7ii85"]
+[ext_resource type="Texture2D" uid="uid://b323nh2whd1lc" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_013.png" id="8_8ue6k"]
 [ext_resource type="Texture2D" uid="uid://b1d13cxwivaot" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_013.png" id="8_qsq0w"]
+[ext_resource type="Texture2D" uid="uid://omjqge76w7oe" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_015.png" id="9_jacq1"]
 [ext_resource type="Texture2D" uid="uid://d1bg67fk54wqq" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_015.png" id="9_jf8ow"]
+[ext_resource type="Texture2D" uid="uid://b18uq81830qw4" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_015.png" id="9_ofaej"]
+[ext_resource type="Texture2D" uid="uid://8m4vl52bhvoj" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_017.png" id="10_cj0qv"]
+[ext_resource type="Texture2D" uid="uid://gcvhnirgtdf8" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_017.png" id="10_kud00"]
 [ext_resource type="Texture2D" uid="uid://dsd50cy2ksaco" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_017.png" id="10_x6dh8"]
+[ext_resource type="Texture2D" uid="uid://dh7ue70yef06u" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_019.png" id="11_g44n5"]
+[ext_resource type="Texture2D" uid="uid://bopml1slvp0fw" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_019.png" id="11_j8ile"]
 [ext_resource type="Texture2D" uid="uid://diq22dp1q1yof" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_019.png" id="11_rrwcn"]
 [ext_resource type="Texture2D" uid="uid://cqc172ti3hj7b" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_021.png" id="12_q1siv"]
+[ext_resource type="Texture2D" uid="uid://c32p8u7ehs6d3" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_021.png" id="12_rwol0"]
+[ext_resource type="Texture2D" uid="uid://dpicgkqnxhx8i" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_021.png" id="12_ueb8g"]
 [ext_resource type="Texture2D" uid="uid://b37egn72ej5bo" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_023.png" id="13_aerfb"]
+[ext_resource type="Texture2D" uid="uid://7q8c1gcksn6k" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_023.png" id="13_bklus"]
+[ext_resource type="Texture2D" uid="uid://w7qxic1unqrw" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_023.png" id="13_qewax"]
 [ext_resource type="Texture2D" uid="uid://bwbd5jt1u8v0k" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_025.png" id="14_5smdm"]
+[ext_resource type="Texture2D" uid="uid://c0k3ljtlmjj47" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_025.png" id="14_52cco"]
+[ext_resource type="Texture2D" uid="uid://bkhijp7q55nel" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_025.png" id="14_jf30p"]
+[ext_resource type="Texture2D" uid="uid://clryp565yp2yn" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_027.png" id="15_6l1qc"]
 [ext_resource type="Texture2D" uid="uid://cwcrvdahn3dsr" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_027.png" id="15_cjayb"]
+[ext_resource type="Texture2D" uid="uid://bj2btnk3sr54" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_027.png" id="15_ps2de"]
 [ext_resource type="Texture2D" uid="uid://snwid1oldu0o" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_029.png" id="16_3gde3"]
+[ext_resource type="Texture2D" uid="uid://bbqs6k2ln1ujm" path="res://Assets/Red Raptor/Raptor Attack3/E/Raptor Attack3_0_029.png" id="16_awdjo"]
+[ext_resource type="Texture2D" uid="uid://osept6g7j613" path="res://Assets/Red Raptor/Raptor Die/E/Raptor Die_0_029.png" id="16_scv3y"]
+[ext_resource type="Texture2D" uid="uid://bryxhnucdkaiy" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_001.png" id="17_b4wo1"]
 [ext_resource type="Texture2D" uid="uid://dt3ixkhjl1j70" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_001.png" id="17_vcatc"]
 [ext_resource type="Texture2D" uid="uid://d22xk2pt1lgd7" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_001.png" id="17_w55vf"]
+[ext_resource type="Texture2D" uid="uid://bdp3wjnofd86" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_003.png" id="18_6hdxk"]
 [ext_resource type="Texture2D" uid="uid://dv8jxiuxmgft1" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_003.png" id="18_6up2j"]
 [ext_resource type="Texture2D" uid="uid://bh8rflbodjxty" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_003.png" id="18_scxfu"]
 [ext_resource type="Texture2D" uid="uid://b2kbengn3ufhn" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_005.png" id="19_4p3tw"]
+[ext_resource type="Texture2D" uid="uid://cfcyi7igcubin" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_005.png" id="19_e5bfg"]
 [ext_resource type="Texture2D" uid="uid://caa4ita18eh0j" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_005.png" id="19_mvn2k"]
 [ext_resource type="Texture2D" uid="uid://clojp5rnox4d1" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_007.png" id="20_j4d7e"]
 [ext_resource type="Texture2D" uid="uid://cnnwb0iyl5qqj" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_007.png" id="20_maww5"]
+[ext_resource type="Texture2D" uid="uid://ctoao5gbu4b5y" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_007.png" id="20_u6ydr"]
 [ext_resource type="Texture2D" uid="uid://c3rv4044odxgp" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_009.png" id="21_am6nl"]
 [ext_resource type="Texture2D" uid="uid://bnbnvavvg5f7c" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_009.png" id="21_j6rex"]
+[ext_resource type="Texture2D" uid="uid://bcpilgyxncbnp" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_009.png" id="21_nexlb"]
 [ext_resource type="Texture2D" uid="uid://mgyoe1ge7q3a" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_011.png" id="22_0m2de"]
 [ext_resource type="Texture2D" uid="uid://dlycviwu5ak74" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_011.png" id="22_8ujtk"]
+[ext_resource type="Texture2D" uid="uid://c86lkrfvp4c1w" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_011.png" id="22_xngb7"]
+[ext_resource type="Texture2D" uid="uid://b24nh1265w7p0" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_013.png" id="23_7ii85"]
 [ext_resource type="Texture2D" uid="uid://vv4k5sw2pyep" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_013.png" id="23_dgl1q"]
 [ext_resource type="Texture2D" uid="uid://pkvnnmykinft" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_013.png" id="23_nkh0p"]
 [ext_resource type="Texture2D" uid="uid://dsh44whjkt475" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_015.png" id="24_7sw23"]
 [ext_resource type="Texture2D" uid="uid://ce1afff8nqtbf" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_015.png" id="24_is7c6"]
+[ext_resource type="Texture2D" uid="uid://dlhuu4hfvqat4" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_015.png" id="24_ofaej"]
 [ext_resource type="Texture2D" uid="uid://7owxtdy2eeib" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_017.png" id="25_56j17"]
+[ext_resource type="Texture2D" uid="uid://ckr52w0evn0ry" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_017.png" id="25_kud00"]
 [ext_resource type="Texture2D" uid="uid://bfrffh47c5au1" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_017.png" id="25_ofsyg"]
 [ext_resource type="Texture2D" uid="uid://cemui2fyx8txd" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_019.png" id="26_cbk2s"]
+[ext_resource type="Texture2D" uid="uid://bshgp4ey7wjpl" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_019.png" id="26_g44n5"]
 [ext_resource type="Texture2D" uid="uid://dw7m53sdanex2" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_019.png" id="26_mmw5k"]
 [ext_resource type="Texture2D" uid="uid://bpa4bbuumox7c" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_021.png" id="27_1nthk"]
 [ext_resource type="Texture2D" uid="uid://bcf3i12ca37xr" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_021.png" id="27_nx8f5"]
+[ext_resource type="Texture2D" uid="uid://dfxuwhv0wdims" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_021.png" id="27_ueb8g"]
 [ext_resource type="Texture2D" uid="uid://drhv8h481j82w" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_023.png" id="28_7i8vu"]
 [ext_resource type="Texture2D" uid="uid://bfqkvwnot0y03" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_023.png" id="28_8ku24"]
+[ext_resource type="Texture2D" uid="uid://dihksfbr8in0m" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_023.png" id="28_bklus"]
 [ext_resource type="Texture2D" uid="uid://c3rxaembpdaon" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_025.png" id="29_3lc0y"]
+[ext_resource type="Texture2D" uid="uid://dmwrt2sfqaey0" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_025.png" id="29_52cco"]
 [ext_resource type="Texture2D" uid="uid://clwkmlndexyi7" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_025.png" id="29_jqq61"]
+[ext_resource type="Texture2D" uid="uid://cigpeqeynei41" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_027.png" id="30_6l1qc"]
 [ext_resource type="Texture2D" uid="uid://srsu1mh88mbs" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_027.png" id="30_efbg0"]
 [ext_resource type="Texture2D" uid="uid://dulu2la16ydrx" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_027.png" id="30_hgo5r"]
 [ext_resource type="Texture2D" uid="uid://3mx63uvikxo0" path="res://Assets/Red Raptor/Raptor run/E/Raptor run_0_029.png" id="31_ee1k5"]
+[ext_resource type="Texture2D" uid="uid://ck4niwqvjf7rn" path="res://Assets/Red Raptor/Raptor Attack3/N/Raptor Attack3_90_029.png" id="31_scv3y"]
 [ext_resource type="Texture2D" uid="uid://b6ojatnusbhon" path="res://Assets/Red Raptor/Raptor Idle/N/Raptor Idle_90_029.png" id="31_u7inh"]
+[ext_resource type="Texture2D" uid="uid://d0586cnmiclb2" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_001.png" id="32_ccm41"]
 [ext_resource type="Texture2D" uid="uid://gqfug2l07q8t" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_001.png" id="32_jh6et"]
 [ext_resource type="Texture2D" uid="uid://daptwg7qvw7uq" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_001.png" id="32_kn2sx"]
 [ext_resource type="Texture2D" uid="uid://d21n08rh5eg5f" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_003.png" id="33_ggpsq"]
 [ext_resource type="Texture2D" uid="uid://iriesjpssf2w" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_003.png" id="33_j6oqe"]
+[ext_resource type="Texture2D" uid="uid://dp12hrdniflpe" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_003.png" id="33_ykr5i"]
 [ext_resource type="Texture2D" uid="uid://d15eaukrfee3v" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_005.png" id="34_i586e"]
+[ext_resource type="Texture2D" uid="uid://tnmmb0jd3qnm" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_005.png" id="34_pi4yp"]
 [ext_resource type="Texture2D" uid="uid://dvg07ksqqpmm3" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_005.png" id="34_qj88o"]
 [ext_resource type="Texture2D" uid="uid://de6k8hanjuuaj" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_007.png" id="35_6eqml"]
+[ext_resource type="Texture2D" uid="uid://bdp2wkhe15gn8" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_007.png" id="35_n00cl"]
 [ext_resource type="Texture2D" uid="uid://bqiasdolgjsxh" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_007.png" id="35_uhr0d"]
 [ext_resource type="Texture2D" uid="uid://cbsmcq48bloor" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_009.png" id="36_evo61"]
+[ext_resource type="Texture2D" uid="uid://rbrnr5tt41a2" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_009.png" id="36_fogvh"]
 [ext_resource type="Texture2D" uid="uid://c2fdlikj6d2m8" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_009.png" id="36_n6fvo"]
 [ext_resource type="Texture2D" uid="uid://hvn245drkq6h" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_011.png" id="37_483dk"]
+[ext_resource type="Texture2D" uid="uid://d07xc70oubqpl" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_011.png" id="37_jw2ap"]
 [ext_resource type="Texture2D" uid="uid://dd7faua1hngpo" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_011.png" id="37_pj134"]
 [ext_resource type="Texture2D" uid="uid://b4br17hunye7m" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_013.png" id="38_4rylt"]
+[ext_resource type="Texture2D" uid="uid://cbp5dq6dfvrbf" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_013.png" id="38_d242m"]
 [ext_resource type="Texture2D" uid="uid://dtt8f0t30puu2" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_013.png" id="38_higst"]
+[ext_resource type="Texture2D" uid="uid://obsb36fur752" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_015.png" id="39_4sby7"]
 [ext_resource type="Texture2D" uid="uid://bsrjkoms2uxwl" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_015.png" id="39_edtvl"]
 [ext_resource type="Texture2D" uid="uid://ceb88lu0vbgnj" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_015.png" id="39_ksah1"]
 [ext_resource type="Texture2D" uid="uid://i5u3f1hw5ktp" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_017.png" id="40_gfifq"]
 [ext_resource type="Texture2D" uid="uid://ddixjdnqyypnv" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_017.png" id="40_k7dqt"]
+[ext_resource type="Texture2D" uid="uid://b6cs1bntvjk0l" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_017.png" id="40_mmo1q"]
+[ext_resource type="Texture2D" uid="uid://c6gldfecr2112" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_019.png" id="41_8ovkh"]
 [ext_resource type="Texture2D" uid="uid://b3jto56dfq5io" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_019.png" id="41_jr0yr"]
 [ext_resource type="Texture2D" uid="uid://craunt21c055h" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_019.png" id="41_p31mo"]
 [ext_resource type="Texture2D" uid="uid://don5dtlssjghg" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_021.png" id="42_e866a"]
 [ext_resource type="Texture2D" uid="uid://dd323k2cdv650" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_021.png" id="42_ox60x"]
+[ext_resource type="Texture2D" uid="uid://0cqrixwubkad" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_021.png" id="42_u3p68"]
+[ext_resource type="Texture2D" uid="uid://bv7qh12dnnrxg" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_023.png" id="43_5pdym"]
 [ext_resource type="Texture2D" uid="uid://crhcnq0p7lb57" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_023.png" id="43_53q0u"]
 [ext_resource type="Texture2D" uid="uid://bwknf4mt5tj2t" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_023.png" id="43_gr0kg"]
+[ext_resource type="Texture2D" uid="uid://cb3jrvld5i0nw" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_025.png" id="44_1x0j2"]
 [ext_resource type="Texture2D" uid="uid://cc82fltloipf3" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_025.png" id="44_4dahv"]
 [ext_resource type="Texture2D" uid="uid://crjs2357ew3f1" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_025.png" id="44_y0mhr"]
+[ext_resource type="Texture2D" uid="uid://yyhffn50t6bg" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_027.png" id="45_3lf2n"]
 [ext_resource type="Texture2D" uid="uid://ds8ypn120p6wt" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_027.png" id="45_qy0wk"]
 [ext_resource type="Texture2D" uid="uid://ddr7avum38xc6" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_027.png" id="45_rfs6l"]
+[ext_resource type="Texture2D" uid="uid://cwet1ex7fbcli" path="res://Assets/Red Raptor/Raptor Attack3/S/Raptor Attack3_270_029.png" id="46_0sio4"]
 [ext_resource type="Texture2D" uid="uid://e7e66yr7wxbn" path="res://Assets/Red Raptor/Raptor run/N/Raptor run_90_029.png" id="46_f7gvt"]
 [ext_resource type="Texture2D" uid="uid://jcbmhlp4hsc2" path="res://Assets/Red Raptor/Raptor Idle/S/Raptor Idle_270_029.png" id="46_r0rsr"]
+[ext_resource type="Texture2D" uid="uid://b3wrfnsr0c0y5" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_001.png" id="47_ajnh5"]
 [ext_resource type="Texture2D" uid="uid://dwiry3lkn1l0o" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_001.png" id="47_dcegu"]
 [ext_resource type="Texture2D" uid="uid://cas1vkwx1aim1" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_001.png" id="47_kdr5k"]
 [ext_resource type="Texture2D" uid="uid://cqvmnsquloc7m" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_003.png" id="48_28fmc"]
+[ext_resource type="Texture2D" uid="uid://dycp1f0uq0ibr" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_003.png" id="48_aab1h"]
 [ext_resource type="Texture2D" uid="uid://dsf8vy3u0q3h" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_003.png" id="48_jwvnm"]
+[ext_resource type="Texture2D" uid="uid://bkanwatw0tu4m" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_005.png" id="49_28u6x"]
 [ext_resource type="Texture2D" uid="uid://cmm28m0i78mp1" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_005.png" id="49_e8ign"]
 [ext_resource type="Texture2D" uid="uid://d2exrlepi6js1" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_005.png" id="49_wbpa0"]
 [ext_resource type="Texture2D" uid="uid://cen21jbiswlma" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_007.png" id="50_k7vfq"]
 [ext_resource type="Texture2D" uid="uid://bmekhmorslvet" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_007.png" id="50_kx3er"]
+[ext_resource type="Texture2D" uid="uid://bty0ftdrs5sda" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_007.png" id="50_udyq5"]
 [ext_resource type="Texture2D" uid="uid://djgr4hlq57okq" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_009.png" id="51_ay6th"]
 [ext_resource type="Texture2D" uid="uid://bx733qdg2f7qq" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_009.png" id="51_tf5d3"]
+[ext_resource type="Texture2D" uid="uid://bvsoxptrc4vnb" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_009.png" id="51_wqh0e"]
 [ext_resource type="Texture2D" uid="uid://dow735vbsiqmx" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_011.png" id="52_1m5ki"]
+[ext_resource type="Texture2D" uid="uid://ddfypi8o07ukc" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_011.png" id="52_j3jy7"]
 [ext_resource type="Texture2D" uid="uid://dxnr205tbg23n" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_011.png" id="52_jsdrk"]
 [ext_resource type="Texture2D" uid="uid://c4fp6blbvwh4j" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_013.png" id="53_0b738"]
+[ext_resource type="Texture2D" uid="uid://cmuvjyacernj7" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_013.png" id="53_iv4p3"]
 [ext_resource type="Texture2D" uid="uid://6p6dbg7pn1u3" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_013.png" id="53_xthbj"]
 [ext_resource type="Texture2D" uid="uid://cisuh0mvgtwdk" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_015.png" id="54_33ow2"]
 [ext_resource type="Texture2D" uid="uid://cngj5mgeyt7rl" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_015.png" id="54_asvrw"]
+[ext_resource type="Texture2D" uid="uid://dtt6fykcyuc0t" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_015.png" id="54_fsojj"]
 [ext_resource type="Texture2D" uid="uid://cf8asku74k1aq" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_017.png" id="55_2q73h"]
 [ext_resource type="Texture2D" uid="uid://byurschq48dee" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_017.png" id="55_fe8mf"]
+[ext_resource type="Texture2D" uid="uid://c3el1q72ldl50" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_017.png" id="55_w6gaw"]
 [ext_resource type="Texture2D" uid="uid://dfol2ymtee37o" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_019.png" id="56_l3cja"]
 [ext_resource type="Texture2D" uid="uid://n225s67g1bmt" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_019.png" id="56_rqa6k"]
+[ext_resource type="Texture2D" uid="uid://bwr7r6qnwpi47" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_019.png" id="56_wukbq"]
+[ext_resource type="Texture2D" uid="uid://b6kf6bg56he0s" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_021.png" id="57_kmsmf"]
 [ext_resource type="Texture2D" uid="uid://dnr8eivxlgbfb" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_021.png" id="57_o3pn2"]
 [ext_resource type="Texture2D" uid="uid://bsoi1xk3ar06n" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_021.png" id="57_u6btu"]
 [ext_resource type="Texture2D" uid="uid://blrmqdrgmlc1y" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_023.png" id="58_27vkx"]
+[ext_resource type="Texture2D" uid="uid://samnkq1q88ht" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_023.png" id="58_hfwu0"]
 [ext_resource type="Texture2D" uid="uid://cfxl4ekc44f1u" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_023.png" id="58_mvh1f"]
 [ext_resource type="Texture2D" uid="uid://jxl1rwed3k63" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_025.png" id="59_alfqq"]
 [ext_resource type="Texture2D" uid="uid://c5mwlh7hm5nch" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_025.png" id="59_bl3vr"]
+[ext_resource type="Texture2D" uid="uid://bujc7m5fvmtvp" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_025.png" id="59_n2ul2"]
 [ext_resource type="Texture2D" uid="uid://b8a6mxavvbxpw" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_027.png" id="60_1g28r"]
+[ext_resource type="Texture2D" uid="uid://cghqtwjh1yaqh" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_027.png" id="60_o6pmd"]
 [ext_resource type="Texture2D" uid="uid://ea26qo6c6l1g" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_027.png" id="60_q6j5e"]
+[ext_resource type="Texture2D" uid="uid://bpg5fa2tuegk2" path="res://Assets/Red Raptor/Raptor Attack3/W/Raptor Attack3_180_029.png" id="61_6xdw5"]
 [ext_resource type="Texture2D" uid="uid://cfwusoxuupmln" path="res://Assets/Red Raptor/Raptor run/S/Raptor run_270_029.png" id="61_38jmr"]
 [ext_resource type="Texture2D" uid="uid://dygskpx82uyo4" path="res://Assets/Red Raptor/Raptor Idle/W/Raptor Idle_180_029.png" id="61_urgj4"]
 [ext_resource type="Texture2D" uid="uid://cuyfxsquaxpim" path="res://Assets/Red Raptor/Raptor Attack1/E/Raptor Attack1_0_001.png" id="62_0dkx3"]
@@ -184,6 +259,256 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vcatc"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b4wo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6hdxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e5bfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u6ydr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_nexlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xngb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7ii85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ofaej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kud00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g44n5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ueb8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_bklus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_52cco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6l1qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_scv3y")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7iolh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_phi45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7myvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_777ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gctrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ce1c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_8ue6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jacq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cj0qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_j8ile")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_rwol0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qewax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jf30p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ps2de")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_awdjo")
+}],
+"loop": false,
+"name": &"HeavyAttackE",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_b4wo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_6hdxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_e5bfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_u6ydr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_nexlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_xngb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_7ii85")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ofaej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_kud00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_g44n5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ueb8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_bklus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_52cco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_6l1qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_scv3y")
+}],
+"loop": false,
+"name": &"HeavyAttackN",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_ccm41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ykr5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_pi4yp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_n00cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_fogvh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_jw2ap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_d242m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_4sby7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_mmo1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_8ovkh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_u3p68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_5pdym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_1x0j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_3lf2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_0sio4")
+}],
+"loop": false,
+"name": &"HeavyAttackS",
+"speed": 20.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_ajnh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_aab1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_28u6x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_udyq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_wqh0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_j3jy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_iv4p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_fsojj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_w6gaw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_wukbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_kmsmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_hfwu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_n2ul2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_o6pmd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_6xdw5")
+}],
+"loop": false,
+"name": &"HeavyAttackW",
+"speed": 20.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_7dep6")
@@ -791,5 +1116,4 @@ sprite_frames = SubResource("SpriteFrames_vcatc")
 life = 20.0
 damageLight = 20.0
 damageHeavy = 30.0
-lightRayLength = 175
 metadata/_custom_type_script = "uid://c2r67lr1uipkf"

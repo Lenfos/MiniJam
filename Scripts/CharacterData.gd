@@ -9,5 +9,3 @@ class_name CharacterData
 
 @export var damageLight : float
 @export var damageHeavy : float
-
-@export var lightRayLength : int 
