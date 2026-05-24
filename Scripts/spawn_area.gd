@@ -5,15 +5,23 @@ signal spawn_instance(ennemy : CharacterBody2D)
 
 @export var ennemy : PackedScene
 @onready var col: CollisionShape2D = $CollisionShape2D
+@onready var timer: Timer = $Timer
 
-
+@export var startEnnemyId : int
+@export var endEnnemyId : int
 var ennemyId
 var scene
 
 func _ready() -> void:
-	ennemyId = 0
+	ennemyId = startEnnemyId
 	scene = get_tree().current_scene
 	
+
+func checkId():
+	if ennemyId + 1 >= endEnnemyId:
+		ennemyId = startEnnemyId
+	else:
+		ennemyId += 1
 
 func spawn():
 	var instance = ennemy.instantiate()
@@ -22,7 +30,8 @@ func spawn():
 	
 	scene.add_child(instance)
 	spawn_instance.emit(instance)
-	ennemyId += 1
+	checkId()
+
 	
 func randomEnnemyType() -> GameEnums.EnnemyType:
 	var ennemyType : GameEnums.EnnemyType
@@ -48,4 +57,6 @@ func get_random_point_in_rect() -> Vector2:
 
 
 func _on_timer_timeout() -> void:
+	var new_time = randf_range(2, 5)
+	timer.wait_time = new_time
 	spawn()

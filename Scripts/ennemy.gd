@@ -9,7 +9,9 @@ signal ennemyAttack(damage : float)
 @onready var hit_reset_timer: Timer = $hitResetTimer
 
 const SPEED = 150.0
-
+const LIGHT_ENNEMY_DATA = preload("res://Resources/Ennemy/light_ennemy.tres")
+const MEDIUM_ENNEMY_DATA = preload("res://Resources/Ennemy/medium_ennemy.tres")
+const HEAVY_ENNEMY_DATA = preload("res://Resources/Ennemy/heavy_ennemy.tres")
 
 var ennemyAttr : EnnemyData
 var ennemyType : GameEnums.EnnemyType
@@ -31,12 +33,12 @@ func init(type : GameEnums.EnnemyType, id : int, playerPos : CharacterBody2D):
 	player = playerPos
 	spawnId = id
 	match type:
-		GameEnums.EnnemyType.LIGHT: 
-			ennemyAttr = load("res://Resources/Ennemy/light_ennemy.tres")
+		GameEnums.EnnemyType.LIGHT:
+			ennemyAttr = LIGHT_ENNEMY_DATA.duplicate(true)
 		GameEnums.EnnemyType.MEDIUM:
-			ennemyAttr = load("res://Resources/Ennemy/medium_ennemy.tres")
+			ennemyAttr = MEDIUM_ENNEMY_DATA.duplicate(true)
 		GameEnums.EnnemyType.HEAVY:
-			ennemyAttr = load("res://Resources/Ennemy/heavy_ennemy.tres")
+			ennemyAttr = HEAVY_ENNEMY_DATA.duplicate(true)
 			
 	life = ennemyAttr.life
 	
@@ -46,6 +48,7 @@ func applySkin():
 func _process(delta: float) -> void:
 	if anim.animation == "Attack":
 		if anim.frame == 3 && !damageDealt:
+			damageDealt = true
 			dealDamage()
 	
 func _physics_process(delta: float) -> void:
@@ -77,7 +80,6 @@ func attack():
 	
 			
 func dealDamage():
-	damageDealt = true
 	var direction = (player.position - position).normalized()
 
 	attack_raycast.target_position = (direction * 70)
@@ -88,7 +90,7 @@ func dealDamage():
 			ennemyAttack.emit(ennemyAttr.damage)
 
 func check_life():
-	if life <= 0:
+	if life <= 1:
 		anim.play("Die")
 		ennemyDie.emit(ennemyAttr.drop_xp)
 	hit_flash()
@@ -106,7 +108,7 @@ func on_player_attack(damage : float, id : int):
 		var direction = (player.position - position).normalized() * -1
 		knockback_velocity = direction * 400
 		hit = true
-		life -= damage
+		life -= abs(damage)
 		hit_reset_timer.start()
 		check_life()
 	

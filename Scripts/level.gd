@@ -9,6 +9,7 @@ signal player_dead
 
 var player : CharacterBody2D
 var spawnArea : Area2D
+var spawnArea2 : Area2D
 
 var lightEnemy : EnnemyData
 var mediumEnemy : EnnemyData
@@ -36,9 +37,10 @@ func _ready() -> void:
 	player_dead.connect(dead_menu.on_player_death)
 	
 	spawnArea = get_node("SpawnArea")
-	
-	if spawnArea != null:
+	spawnArea2 = get_node("SpawnArea2")
+	if spawnArea != null && spawnArea2 != null:
 		spawnArea.spawn_instance.connect(on_new_instance)
+		spawnArea2.spawn_instance.connect(on_new_instance)
 		
 	
 	lightEnemy = load("res://Resources/Ennemy/light_ennemy.tres")
@@ -66,10 +68,9 @@ func on_player_update_stamina(newStam : int):
 	update_stamina.emit(newStam)
 
 func on_new_instance(ennemy : CharacterBody2D):
-	if !ennemy.ennemyAttack.is_connected(player.on_ennemy_attack):
-		player.player_attack.connect(ennemy.on_player_attack)
-		ennemy.ennemyDie.connect(player.on_ennemy_die)
-		ennemy.ennemyAttack.connect(player.on_ennemy_attack)
+	player.player_attack.connect(ennemy.on_player_attack)
+	ennemy.ennemyDie.connect(player.on_ennemy_die)
+	ennemy.ennemyAttack.connect(player.on_ennemy_attack)
 
 func player_death():
 	player_dead.emit()

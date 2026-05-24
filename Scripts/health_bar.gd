@@ -17,6 +17,7 @@ func on_player_max_health_changed_progress(newLife : float):
 	playerMaxLife = newLife
 	playerLife = newLife
 	health_progress_bar.value = 1
+	print("enfoire")
 
 	
 func on_player_stamina_changed_progress(newStamina : float):

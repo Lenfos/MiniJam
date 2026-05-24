@@ -22,6 +22,15 @@ signal player_death
 const SPEED = 300.0
 const MULTXP = 1.2
 
+# dino
+const RAPTOR_DATA = preload("res://Resources/Player/player_raptor.tres")
+const DILO_DATA = preload("res://Resources/Player/player_dilophosaur.tres")
+const GALLIMINUS_DATA = preload("res://Resources/Player/player_galliminus.tres")
+const TRICERATOPS_DATA = preload("res://Resources/Player/player_triceratops.tres")
+const STEGOSAURE_DATA = preload("res://Resources/Player/player_stegosaure.tres")
+const CROCODILE_DATA = preload("res://Resources/Player/player_crocodile.tres")
+const REX_DATA = preload("res://Resources/Player/player_rex.tres")
+
 # lightAttack
 var can_light_attack = true
 var isAttacking : bool = false
@@ -40,7 +49,7 @@ var level = 1
 var next_level_xp = 10
 var xp = 0
 
-var life = 100
+var life
 var dead = false
 
 
@@ -86,26 +95,26 @@ func _physics_process(delta: float) -> void:
 func switchSkin():
 	print(level)
 	match level:
-		1: 
-			playerAttr = load("res://Resources/Player/player_raptor.tres")
+		1:
+			playerAttr = RAPTOR_DATA.duplicate(true)
 			applySkin()
 		10:
-			playerAttr = load("res://Resources/Player/player_dilophosaur.tres")
+			playerAttr = DILO_DATA.duplicate(true)
 			applySkin()
 		20:
-			playerAttr = load("res://Resources/Player/player_galliminus.tres")
+			playerAttr = GALLIMINUS_DATA.duplicate(true)
 			applySkin()
 		30:
-			playerAttr = load("res://Resources/Player/player_triceratops.tres")
+			playerAttr = TRICERATOPS_DATA.duplicate(true)
 			applySkin()
 		40:
-			playerAttr = load("res://Resources/Player/player_stegosaure.tres")
+			playerAttr = STEGOSAURE_DATA.duplicate(true)
 			applySkin()
 		50:
-			playerAttr = load("res://Resources/Player/player_crocodile.tres")
+			playerAttr = CROCODILE_DATA.duplicate(true)
 			applySkin()
 		60:
-			playerAttr = load("res://Resources/Player/player_rex.tres")
+			playerAttr = REX_DATA.duplicate(true)
 			applySkin()
 
 func applySkin():
@@ -137,6 +146,7 @@ func changeSuffixe(directionX, directionY):
 
 
 func check_life():
+	print(life)
 	if life <= 0:
 		isAttacking = true
 		dead = true
@@ -165,8 +175,8 @@ func check_xp():
 func on_ennemy_attack(ennemyDamage : float):
 	if dead:
 		return
-	life -= ennemyDamage
-	update_health.emit(ennemyDamage)
+	life -= abs(ennemyDamage)
+	update_health.emit(abs(ennemyDamage))
 	check_life()
 
 func on_ennemy_die(dropXp : float):
