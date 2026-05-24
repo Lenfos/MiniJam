@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://cqjq6athxinkw"]
+
+[ext_resource type="Texture2D" uid="uid://blt2x2mghfawv" path="res://Assets/UI/png/Button/Rect/Fill/Default.png" id="1_8y2ln"]
+[ext_resource type="Script" uid="uid://c7hwusqj0balw" path="res://Scripts/dead_menu.gd" id="1_o1tb6"]
+[ext_resource type="Texture2D" uid="uid://t2ce5l5pdlsc" path="res://Assets/UI/png/Button/Rect/Fill/Hover.png" id="2_o1tb6"]
+[ext_resource type="Texture2D" uid="uid://h30qokjcedix" path="res://Assets/UI/png/Icon/Replay.png" id="3_lr73i"]
+[ext_resource type="Texture2D" uid="uid://ciyaopvk4g8u4" path="res://Assets/UI/png/Icon/Home.png" id="4_virm3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gmle0"]
+font_size = 33
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_o1tb6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lr73i"]
+resource_name = "transition"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CenterContainer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_virm3"]
+_data = {
+&"RESET": SubResource("Animation_o1tb6"),
+&"transition": SubResource("Animation_lr73i")
+}
+
+[node name="DeadMenu" type="Control" unique_id=960240090 node_paths=PackedStringArray("restart", "menu", "animation_player")]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o1tb6")
+restart = NodePath("CenterContainer/VBoxContainer/Restart")
+menu = NodePath("CenterContainer/VBoxContainer/Menu")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1896408403]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+use_top_left = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=2147398206]
+layout_mode = 2
+alignment = 1
+
+[node name="Restart" type="TextureButton" parent="CenterContainer/VBoxContainer" unique_id=1393449562]
+layout_mode = 2
+texture_normal = ExtResource("1_8y2ln")
+texture_hover = ExtResource("2_o1tb6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Restart" unique_id=1313771183]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/Restart/HBoxContainer" unique_id=456942988]
+custom_minimum_size = Vector2(44.5, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("3_lr73i")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Restart/HBoxContainer" unique_id=781877438]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "RESTART"
+label_settings = SubResource("LabelSettings_gmle0")
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer" unique_id=512661158]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 40.435)
+layout_mode = 2
+
+[node name="Menu" type="TextureButton" parent="CenterContainer/VBoxContainer" unique_id=2003606225]
+layout_mode = 2
+texture_normal = ExtResource("1_8y2ln")
+texture_hover = ExtResource("2_o1tb6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer/Menu" unique_id=2048047277]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/Menu/HBoxContainer" unique_id=1130996672]
+custom_minimum_size = Vector2(44.5, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("4_virm3")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/Menu/HBoxContainer" unique_id=328282845]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "MENU"
+label_settings = SubResource("LabelSettings_gmle0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=44374587]
+libraries/ = SubResource("AnimationLibrary_virm3")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Menu" to="." method="_on_menu_pressed"]

@@ -12,9 +12,13 @@ config_version=5
 
 config/name="MiniJam"
 config/description="Enter an interesting project description here!"
-run/main_scene="uid://c0ldbcvnikogf"
+run/main_scene="uid://ni0ekoth4iub"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.png"
+
+[autoload]
+
+SceneManager="*uid://cnk2fbm7uydxr"
 
 [display]
 
@@ -26,6 +30,10 @@ window/stretch/mode="canvas_items"
 
 Ennemy=""
 Player=""
+
+[gui]
+
+theme/custom_font="uid://d1ni2m2qkxkln"
 
 [input]
 

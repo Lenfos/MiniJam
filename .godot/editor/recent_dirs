@@ -1,3 +1,6 @@
+res://Scene/
+res://Scripts/
+res://Assets/
 res://Assets/T-Rex/Die/E/
 res://Assets/Crocodile/Die/E/
 res://Assets/Stegosaurus/Die/E/
@@ -17,6 +20,3 @@ res://Assets/T-Rex/Attack3/W/
 res://Assets/T-Rex/Attack3/S/
 res://Assets/T-Rex/Attack3/N/
 res://Assets/T-Rex/Attack3/E/
-res://Assets/T-Rex/Walk/W/
-res://Assets/T-Rex/Walk/S/
-res://Assets/T-Rex/Walk/N/

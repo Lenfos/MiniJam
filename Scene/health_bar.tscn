@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://ve740d0u1mq2"]
+
+[ext_resource type="Texture2D" uid="uid://ddrjb2xohl252" path="res://Assets/DarkMode Interface/Player interface/Player Status/single size player status/spr_player_status_version2.png" id="1_5a2qa"]
+[ext_resource type="Texture2D" uid="uid://balgh6erg83s3" path="res://Assets/DarkMode Interface/Player interface/Player Status/single size player status/spr_player_status_healthbar_bk.png" id="1_8ylvg"]
+[ext_resource type="Script" uid="uid://hstpspuw7xov" path="res://Scripts/health_bar.gd" id="1_g7i8w"]
+[ext_resource type="Texture2D" uid="uid://wyo5r65ioewh" path="res://Assets/DarkMode Interface/Player interface/Player Status/single size player status/spr_player_status_staminahbar_bk.png" id="3_twuq3"]
+
+[node name="StatusBar" type="Control" unique_id=272012346]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 20.0
+scale = Vector2(1.0093006, 1)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_g7i8w")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1258687276]
+layout_mode = 1
+offset_right = 83.0
+offset_bottom = 40.0
+scale = Vector2(3.8718443, 3.8718443)
+texture = ExtResource("1_5a2qa")
+stretch_mode = 5
+
+[node name="healthProgressBar" type="TextureProgressBar" parent="TextureRect" unique_id=2133502250]
+z_index = -1
+layout_mode = 0
+offset_left = 31.251257
+offset_top = 14.205116
+offset_right = 76.25126
+offset_bottom = 54.205116
+scale = Vector2(1.07173, 1.1434832)
+max_value = 1.0
+step = 0.1
+value = 1.0
+texture_progress = ExtResource("1_8ylvg")
+
+[node name="StaminaProgressBar" type="TextureProgressBar" parent="TextureRect" unique_id=1288030407]
+z_index = -1
+layout_mode = 0
+offset_left = 26.344034
+offset_top = 22.469913
+offset_right = 69.34403
+offset_bottom = 62.469913
+rotation = -0.0022114594
+scale = Vector2(1.0482188, 1.2158816)
+max_value = 1.0
+step = 0.1
+value = 1.0
+texture_progress = ExtResource("3_twuq3")

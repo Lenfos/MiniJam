@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 signal player_attack(damage : float, id : int)
 signal level_up
+signal level_up_gui(newLife : float, newStamina : int)
+signal update_health(damage : float)
+signal update_stamina(newStamina : int)
+signal player_death
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var cam: Camera2D = $Camera2D
@@ -32,7 +36,7 @@ var playerAttr : CharacterData
 var animSuffixe : String = "E"
 
 # XP
-var level = 60
+var level = 1
 var next_level_xp = 10
 var xp = 0
 
@@ -42,7 +46,7 @@ var dead = false
 
 #region integrateFunction
 
-func _ready() -> void:
+func initialize() -> void:
 	switchSkin()
 	anim.animation_finished.connect(on_animation_finished)
 	light_attack_timer.timeout.connect(_on_light_attack_timer_timeout)
@@ -113,6 +117,7 @@ func applySkin():
 	life = playerAttr.life
 	if level != 1:
 		level_up.emit()
+	level_up_gui.emit(playerAttr.life, 3)
 	
 func changeSuffixe(directionX, directionY):
 	if directionY > 0 && directionX <= 0.3 && directionX >= -0.3:
@@ -136,6 +141,7 @@ func check_life():
 		isAttacking = true
 		dead = true
 		anim.play("Die")
+		player_death.emit()
 	else:
 		hit_flash()
 		
@@ -160,6 +166,7 @@ func on_ennemy_attack(ennemyDamage : float):
 	if dead:
 		return
 	life -= ennemyDamage
+	update_health.emit(ennemyDamage)
 	check_life()
 
 func on_ennemy_die(dropXp : float):
@@ -207,6 +214,7 @@ func heavyAttack():
 	
 	anim.play("HeavyAttack" + animSuffixe)
 	usedHeavy += 1
+	update_stamina.emit(maxHeavy - usedHeavy)
 	
 	heavy_attack_zone.monitoring = true
 	heavy_attack_timer.start()

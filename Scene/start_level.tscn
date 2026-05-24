@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ni0ekoth4iub"]
+
+[ext_resource type="PackedScene" uid="uid://c7daoo40pmo1k" path="res://Scene/start_menu.tscn" id="1_sdr5w"]
+
+[node name="StartLevel" type="Node2D" unique_id=1659597931]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1893656765]
+
+[node name="StartMenu" parent="CanvasLayer" unique_id=946946410 instance=ExtResource("1_sdr5w")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
