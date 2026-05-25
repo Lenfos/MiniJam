@@ -1,7 +1,8 @@
 extends Control
 
-@onready var play: TextureButton = $VBoxContainer/Play
-@onready var quit: TextureButton = $VBoxContainer/Quit
+@export var play: TextureButton
+@export var quit: TextureButton
+
 
 var mainScene = "uid://c0ldbcvnikogf"
 

@@ -2,6 +2,7 @@ extends Node2D
 
 signal level_up_health(newLife : float)
 signal level_up_stamina(newStamina : float)
+signal new_level
 signal update_health(damage : float)
 signal update_stamina(stamina : float)
 signal initialize_player()
@@ -27,12 +28,14 @@ func _ready() -> void:
 	player.update_health.connect(on_player_update_life)
 	player.update_stamina.connect(on_player_update_stamina)
 	player.player_death.connect(player_death)
+	player.new_level.connect(on_player_new_level)
 	initialize_player.connect(player.initialize)
 	
 	level_up_health.connect(playerStatus.on_player_max_health_changed_progress)
 	level_up_stamina.connect(playerStatus.on_player_max_stamina_changed_progress)
 	update_health.connect(playerStatus.on_player_health_changed_progress)
 	update_stamina.connect(playerStatus.on_player_stamina_changed_progress)
+	new_level.connect(playerStatus.on_player_level_up)
 	
 	player_dead.connect(dead_menu.on_player_death)
 	
@@ -74,3 +77,6 @@ func on_new_instance(ennemy : CharacterBody2D):
 
 func player_death():
 	player_dead.emit()
+	
+func on_player_new_level():
+	new_level.emit()

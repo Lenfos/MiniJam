@@ -10,8 +10,9 @@ config_version=5
 
 [application]
 
-config/name="MiniJam"
-config/description="Enter an interesting project description here!"
+config/name="DinoRush"
+config/description="Video game submission for MiniJam 211 : Dinosaurs"
+config/version="0.9"
 run/main_scene="uid://ni0ekoth4iub"
 config/features=PackedStringArray("4.6")
 config/icon="res://icon.png"

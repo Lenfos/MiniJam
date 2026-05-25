@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://chrmx41nh4vj6" path="res://Scripts/player.gd" id="1_y8w33"]
 [ext_resource type="Shader" uid="uid://ci5q52yjvl0b1" path="res://Resources/hitShader.gdshader" id="2_xa75v"]
 [ext_resource type="Texture2D" uid="uid://cykaqfyx37cpx" path="res://Assets/Red Raptor/Raptor Idle/E/Raptor Idle_0_001.png" id="2_y8w33"]
+[ext_resource type="AudioStream" uid="uid://bi7ejsedcyy57" path="res://Assets/Sounds/Heavy-monster-footsteps-sound-_Sound-effect_.ogg" id="4_58ae2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_58ae2"]
 shader = ExtResource("2_xa75v")
@@ -29,10 +30,8 @@ size = Vector2(64, 37)
 radius = 118.004234
 
 [node name="Player" type="CharacterBody2D" unique_id=1531719688 groups=["Player"]]
+z_index = 1
 script = ExtResource("1_y8w33")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=471142449]
-position_smoothing_enabled = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2068155642]
 material = SubResource("ShaderMaterial_58ae2")
@@ -71,5 +70,10 @@ debug_color = Color(0.563734, 0.5578781, 0.08604496, 0.41960785)
 [node name="heavyAttackTimer" type="Timer" parent="." unique_id=584366987]
 wait_time = 0.3
 one_shot = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=947041816]
+stream = ExtResource("4_58ae2")
+volume_db = -40.0
+max_polyphony = 2
 
 [connection signal="timeout" from="heavyAttackTimer" to="." method="_on_heavy_attack_timer_timeout"]

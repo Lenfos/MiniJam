@@ -45,7 +45,7 @@ func init(type : GameEnums.EnnemyType, id : int, playerPos : CharacterBody2D):
 func applySkin():
 	anim.sprite_frames = ennemyAttr.sprite
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if anim.animation == "Attack":
 		if anim.frame == 3 && !damageDealt:
 			damageDealt = true
@@ -93,6 +93,7 @@ func check_life():
 	if life <= 1:
 		anim.play("Die")
 		ennemyDie.emit(ennemyAttr.drop_xp)
+		z_index -= 1
 	hit_flash()
 
 func hit_flash():

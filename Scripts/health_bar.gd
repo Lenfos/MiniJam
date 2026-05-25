@@ -2,12 +2,15 @@ extends Control
 
 @onready var health_progress_bar: TextureProgressBar = $TextureRect/healthProgressBar
 @onready var stamina_progress_bar: TextureProgressBar = $TextureRect/StaminaProgressBar
+@onready var level_label: Label = $TextureRect/LevelLabel
 
 var playerLife = 100
 var playerMaxLife = 100
 
 var playerMaxStamina = 3
 var playerStamina = 3
+
+var playerLevel = 0
 
 func on_player_health_changed_progress(damage : float):
 	playerLife -= damage
@@ -17,8 +20,10 @@ func on_player_max_health_changed_progress(newLife : float):
 	playerMaxLife = newLife
 	playerLife = newLife
 	health_progress_bar.value = 1
-	print("enfoire")
 
+func on_player_level_up():
+	playerLevel += 1
+	level_label.text = str(playerLevel)
 	
 func on_player_stamina_changed_progress(newStamina : float):
 	playerStamina = newStamina

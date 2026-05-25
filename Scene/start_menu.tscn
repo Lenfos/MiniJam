@@ -10,7 +10,7 @@
 font_size = 33
 font_color = Color(0, 0, 0, 1)
 
-[node name="StartMenu" type="Control" unique_id=946946410]
+[node name="StartMenu" type="Control" unique_id=946946410 node_paths=PackedStringArray("play", "quit")]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -20,6 +20,8 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jikgm")
+play = NodePath("CenterContainer/VBoxContainer/Play")
+quit = NodePath("CenterContainer/VBoxContainer/Quit")
 
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=2099215390]
 layout_mode = 0

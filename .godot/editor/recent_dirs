@@ -1,6 +1,10 @@
+C:/MiniJam/Builds/Windows_1.0/
+C:/MiniJam/Builds/0.9.1/
+C:/MiniJam/Builds/
+res://Assets/Sounds/
 res://Resources/
-res://Scene/
 res://Scripts/
+res://Scene/
 res://Assets/
 res://Assets/T-Rex/Die/E/
 res://Assets/Crocodile/Die/E/
@@ -19,4 +23,3 @@ res://Assets/T-Rex/Attack2/N/
 res://Assets/T-Rex/Attack2/E/
 res://Assets/T-Rex/Attack3/W/
 res://Assets/T-Rex/Attack3/S/
-res://Assets/T-Rex/Attack3/N/

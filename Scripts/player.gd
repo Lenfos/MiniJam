@@ -3,13 +3,14 @@ extends CharacterBody2D
 signal player_attack(damage : float, id : int)
 signal level_up
 signal level_up_gui(newLife : float, newStamina : int)
+signal new_level
 signal update_health(damage : float)
 signal update_stamina(newStamina : int)
 signal player_death
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-@onready var cam: Camera2D = $Camera2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var footstep_sound: AudioStreamPlayer = $AudioStreamPlayer
 
 # Light Attack
 @onready var light_attack_timer: Timer = $lightAttackTimer
@@ -61,6 +62,7 @@ func initialize() -> void:
 	light_attack_timer.timeout.connect(_on_light_attack_timer_timeout)
 	light_attack_zone.monitoring = false
 	heavy_attack_zone.monitoring = false
+
 	
 
 func _input(event: InputEvent) -> void:
@@ -69,7 +71,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_select") && can_heavy_attack && !isAttacking:
 		heavyAttack()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	
 	var directionX = Input.get_axis("ui_left", "ui_right")
 	var directionY = Input.get_axis("ui_up", "ui_down")
@@ -79,13 +81,15 @@ func _physics_process(delta: float) -> void:
 	
 	if direction != Vector2.ZERO && !isAttacking:
 		anim.play("Walk" + animSuffixe)
+		if !footstep_sound.playing:
+			footstep_sound.play()
 		velocity = direction * SPEED
 	else: 
 		if !isAttacking:
 			anim.play("Idle" + animSuffixe)
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-
+		footstep_sound.stop()
 	move_and_slide()
 
 #endregion
@@ -116,6 +120,7 @@ func switchSkin():
 		60:
 			playerAttr = REX_DATA.duplicate(true)
 			applySkin()
+	new_level.emit()
 
 func applySkin():
 	anim.sprite_frames = playerAttr.sprite_frames
